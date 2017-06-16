@@ -2,7 +2,7 @@ class appCtrl {
 	constructor() {
 		var ctrl = this;
 
-
+	
 		
 	};
 }

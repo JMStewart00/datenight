@@ -1,0 +1,29 @@
+<div>
+	<h3><span id="dinnerPlace" class="label label-default col-xs-12">{{$ctrl.dinnerspots[0].name}}</span></h3>
+
+	<div class="row">
+	<div class="col-xs-12">
+	<div class="panel panel-default
+	 text-center">
+		<!-- Table -->
+		<table class="table">
+			<tr>
+				<td colspan="4">Address: {{$ctrl.dinnerspots[0].location.address1}}, {{$ctrl.dinnerspots[0].location.zip_code}}</td>
+			</tr>
+			<tr>
+				<td>Phone:</td>
+				<td>{{$ctrl.dinnerspots[0].display_phone}}</td>
+				<td>Price:</td>
+				<td>{{$ctrl.dinnerspots[0].price}}</td>
+			</tr>
+			<tr>
+				<td>Rating:</td>
+				<td>{{$ctrl.dinnerspots[0].rating}} out of 5</td>
+				<td>See More:</td>
+				<td><a href="{{$ctrl.dinnerspots[0].url}}" target="_blank">Website</a></td>
+			</tr>
+		</table>
+	</div>
+	</div>
+	</div>
+</div>

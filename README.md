@@ -26,3 +26,21 @@ To do this, here are some suggested data and mapping APIs:
 - Let user set preferences for types of food, activities, drinks
 - User Maps API to minimize drive or walk distance between options
 - Let user send an email to themselves with results, populate email with details for times / locations / prices / etc
+
+### Github Issues
+
+[Github Issues List](https://github.com/JMStewart00/datenight/issues)
+- Landing Page
+- Navbar/Header
+- Dinner Component
+- Activity Component
+- Drinks Component
+
+Color scheme:
+White: #FFFFFA
+Lighter gray: #515052
+Black: #000103
+Darker Gray: #333138
+Pale red: #FF4C49
+
+GPA: AIzaSyBnokpJPzwEcpfZ6h4L-D7-AcqwuwYgctg

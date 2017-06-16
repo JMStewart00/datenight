@@ -8,6 +8,8 @@ import source from 'vinyl-source-stream';
 import autoprefixer from 'gulp-autoprefixer';
 import concat from 'gulp-concat';
 import sass from 'gulp-sass';
+import dotenv from 'gulp-dotenv';
+import rename from 'gulp-rename';
 
 const autoprefixerOptions = {
     browsers: [
@@ -35,14 +37,14 @@ gulp.task('html', () => {
         .pipe(connect.reload());
 });
 
-gulp.task('js', () =>{
-    gulp.src('.dist/js/bundle.js')
-        .pipe(connect.reload());
-});
+// gulp.task('js', () =>{
+//     gulp.src('.dist/js/bundle.js')
+// });
 
 gulp.task('watch', () => {
-    gulp.watch(['./*'], ['html']);
-    gulp.watch(['./dist/js/bundle.js'], ['js'])
+    gulp.watch(['./*.html'], ['html']);
+    // gulp.watch(['./dist/js/bundle.js'], ['js'])
+    gulp.watch(['./app/**/*.scss'], ['sass']);
 });
 
 gulp.task('bundle', () => {
@@ -75,6 +77,7 @@ gulp.task('bundle', () => {
         })
         .pipe(source('bundle.js'))
         .pipe(gulp.dest('dist/js/'))
+        .pipe(connect.reload());
     }
 });
 
@@ -86,11 +89,15 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./dist/css/'))
 });
 
-gulp.task('css', () => {
-    gulp.watch('app/**/*.scss', ['sass']);
-})
+gulp.task('dotenv', () => {
+    return gulp.src('.env')
+    .pipe(dotenv())
+    .pipe(rename("env.json"))
+    .pipe(gulp.dest('./dist/'))
+});
 
-gulp.task('default', ['connect', 'watch', 'bundle', 'css']);
+
+gulp.task('default', ['connect', 'watch', 'bundle', 'dotenv']);
 
 
 

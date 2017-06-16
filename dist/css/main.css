@@ -1,0 +1,52 @@
+html, body {
+  background-color: #FF4C49; }
+
+.panel, .panel-body, .table {
+  padding: 0;
+  margin: auto;
+  background-color: transparent;
+  color: white;
+  border-color: none; }
+
+.label {
+  margin: 3px 0px; }
+
+.table > * {
+  padding: 1px; }
+
+.navbar {
+  background: #FF4C49;
+  text-align: center;
+  margin-bottom: 0px; }
+
+#randomBtn {
+  background: transparent;
+  border-color: #515052;
+  border-radius: 5px;
+  color: #FFFFFA; }
+
+.panel, .panel-body, .table {
+  padding: 0;
+  margin: auto;
+  background-color: transparent;
+  color: white;
+  border-color: none; }
+
+.label {
+  margin: 3px 0px; }
+
+.table > * {
+  padding: 1px; }
+
+.panel, .panel-body, .table {
+  padding: 0;
+  margin: auto;
+  background-color: transparent;
+  color: white;
+  border-color: none; }
+
+.label {
+  margin: 3px 0px; }
+
+.table > * {
+  padding: 1px; }
